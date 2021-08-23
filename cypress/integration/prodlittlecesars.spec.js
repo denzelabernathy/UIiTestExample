@@ -1,6 +1,6 @@
 /// <reference types ="cypress" />
 
-describe('Delivery Order, happy path', () => {
+describe('Delivery Order, happy', () => {
     beforeEach(() => {
         cy.visit('https://littlecaesars.com/')
     })
