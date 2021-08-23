@@ -1,15 +1,17 @@
 /// <reference types ="cypress" />
 
-const { find } = require("cypress/types/lodash")
+
 
 it('should navigate to the Little Caesars Prod Web App', () => {
     cy.visit('https://littlecaesars.com/')
+    cy.get('[data-testid=homePage__delivery-link]').should('have.attr', 'href')
     cy.get('.StartYourOrderstyle__Flip-sc-14sb6f0-0 > .sc-htpNat').should('have.text', 'Start your order')
 })
 
 it('should be able to navigate to delivery page', () => {
     cy.visit('https://littlecaesars.com/')
-    cy.get('[data-testid=homePage__delivery-link]').click()   
+    cy.get('[data-testid=homePage__delivery-link]').click()
+    cy.get('[data-testid=locator__delivery-link]').should('be.visible')
 })
 
 // it('has ability to enter delivery address', () => {
