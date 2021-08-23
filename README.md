@@ -1,1 +1,1 @@
-An refernce of how I utilize Cypress for Web UI test automation!
+A refernce of how I utilize Cypress for Web UI test automation!
